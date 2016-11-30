@@ -1,58 +1,69 @@
-JSON ORM MANIPULATION
+# JSON ORM MANIPULATION
 
-
-Description:
+### Description:
 
 A ORM like interface to manipulate json files. Check the test for examples.
 
+### Usage
 
-Query language
+#### Initialization
 
-Find
-Searches for matching objects inside a json tree. example query.
+var jorm = require('json-orm');
+var json = {myobj:"this is a object"}
+var instance = new jorm(json)
 
-[{
+#### Find
+Uses a query to find a element , example query:
+var query = [{
 keyName: 'name',
-type: 'normal' (default), 'eval', 'regex',
-value: 'value' * any value
+type: 'normal' (default) or 'regex',
+value: {value} or '*'
 }]
 
-A find result will be a array of objects path for the object , example:
+var foundObjects = instance.find(query);
+
+Returns an array of strings with the objects path within the main json objects, example:
 ['this.that.path.obj.3.this']
 
-Update:
+#### Update:
 
 Updates a object , using a update object , it may add properties or replace them.
-Updates may be conditional , dynamic, example of update object
+Updates may be conditional , dynamic, example of update object.
+Updates are in array format as you can apply several updates to the same object at once.
+Update object example:
 
-[{
+var updateObj = [{
 	keyname: 'name',
 	type: 'normal' (default), 'eval'
 	value: {['John','Jack'],['Mary','Jason']} // dynamic replacement example, will change John to Mary and Jack to Json, will not change otherwize. Values can be object
 	value: 'new Date()' // eval example, adding if needed
 	value: 34 // just setting new value, adding if needed
+	value: {obj: { obj2 : {obj3 : 'a'}}}
 }]
 
-Insert: 
+instance.update(foundObjects[0], updateObj)
+
+#### Insert: 
 Inserts are like array operations, we are basically inserting a new element as a brother to our path , by default it inserts after our element, but we can specify
 if we want to insert before. 
 
 Example insert object:
-jsonorm.insert('path for sibling','object','before: boolean')
+instance.insert('path for sibling','object to insert','before: boolean')
 
-getObject:
-Copies a element into another one, if there is input , needs to be in update format as it wil copy and make replacements.
-For example, copy and replace a property value into a copied object.
-will return a object, you can then use the object at inserts
+#### Delete:
+Removes a object from the main object
+instance.remove('path for element to delete')
 
-Delete:
-Removes a element from json file
+#### getObject:
+Gets the inner object from path
 
+var element = instance.getObject('path');
 
+### To access the modified json data just access
 
+var changedData = instance.data
 
-
-
+For better example please see the test flle
 
 
 
