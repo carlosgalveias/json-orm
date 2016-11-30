@@ -1,0 +1,5217 @@
+{
+  "Id": 100751,
+  "UserName": "carlosgalveias",
+  "Settings": [
+    {
+      "Key": "AsynchronousGrab",
+      "Value": false,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "FindChildRefresh",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "DisableMSAA",
+      "Value": false,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "HighlightObjects",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "SpyStartDelay",
+      "Value": 1000,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "SpyGrabDelay",
+      "Value": 250,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "ObjectSpyHotkey",
+      "Value": "Ctrl+F12",
+      "Type": 3,
+      "Enabled": false
+    },
+    {
+      "Key": "DevMode",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "StopOnError",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "ProductBinding",
+      "Value": "Savvion",
+      "Type": 4,
+      "Enabled": false
+    },
+    {
+      "Key": "ClimbUpKey",
+      "Value": "Alt+Q",
+      "Type": 3,
+      "Enabled": false
+    },
+    {
+      "Key": "ClimbDownKey",
+      "Value": "Alt+W",
+      "Type": 3,
+      "Enabled": false
+    },
+    {
+      "Key": "HideTestExecute",
+      "Value": false,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "ShowNavigationBuilder",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "GetAlias",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "SaveAliasDebugInfo",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "UploadFixFiles",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "RemoveAliasOnPaste",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "TimeoutInSeconds",
+      "Value": 1,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "DraggingDelay",
+      "Value": 50,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "NoWrap",
+      "Value": false,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "AutoFixWTF",
+      "Value": false,
+      "Type": 1,
+      "Enabled": false
+    },
+    {
+      "Key": "BrowserName",
+      "Value": "iexplore",
+      "Type": 4,
+      "Enabled": false
+    },
+    {
+      "Key": "uiAutomation",
+      "Value": true,
+      "Type": 1,
+      "Enabled": false
+    }
+  ],
+  "TestCases": [
+    {
+      "Id": 1011183,
+      "Notes": null,
+      "TestCaseElements": [
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "75997aa8-5e8a-4dbf-875c-d5c2654e39de",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": "Testing Generic Navigation on Notepad",
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 1,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "75868d4f-aa2e-4ab5-9a5e-a8c08518eecd",
+          "ActionMethod": {
+            "Name": "OpenExplorerItem",
+            "MethodParameters": [
+              {
+                "Argument": "FullPath",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "notepad",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 3,
+          "Grammar": null,
+          "Notes": null,
+          "PassExecution": 0,
+          "Screen": {
+            "ScreenshotFileName": "Images\\4db93510-7de0-45c0-b2e2-5066325837b8fileAction.jpg"
+          },
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 2,
+          "SemanticName": "notepad",
+          "SemanticType": "File",
+          "DesiredQuery": null,
+          "ParentQuery": [],
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "705d3fca-3a74-443c-a49e-9947207a91db",
+          "ActionMethod": {
+            "Name": "Maximize",
+            "MethodParameters": []
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 3,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\b8be6e4a-a62e-4e44-aa6f-3a1c9ee676e6.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 145,
+            "Left": 15,
+            "Width": 1036,
+            "Height": 624
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 3,
+          "SemanticName": "Untitled - Notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Caption",
+              "value": "Untitled - Notepad",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            }
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "087bb954-2361-4572-9a65-632b918ee3bd",
+          "ActionMethod": {
+            "Name": "Keys",
+            "MethodParameters": [
+              {
+                "Argument": "Keys",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "Test[Enter][Enter][Enter][Enter]Test",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\2cc1b184-643f-400b-9941-b14197091f80.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 43,
+            "Left": 0,
+            "Width": 1280,
+            "Height": 941
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 4,
+          "SemanticName": "Empty notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Text",
+              "value": "",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Window(\"Edit\", \"\", 1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "6448a3be-2567-4dd3-ac1c-cdf468088dc8",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Top",
+              "Value": 3,
+              "ValueType": "number",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            },
+            {
+              "Name": "ScreenLeft",
+              "Value": 7,
+              "ValueType": "number",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            },
+            {
+              "Name": "Text",
+              "Value": "Test",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\1eb291e8-3455-4f0d-b92e-6e8e73f2b24c.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 46,
+            "Left": 7,
+            "Width": 32,
+            "Height": 18
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 5,
+          "SemanticName": "Test",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Top",
+              "value": 3,
+              "type": "Normal",
+              "valueType": "Integer"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "59799750-1c7b-424a-a5ec-adbcc4f70ec3",
+          "ActionMethod": {
+            "Name": "Close",
+            "MethodParameters": [
+              {
+                "Argument": "WaitTimeout",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 3,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\433be599-5854-475c-a06e-68f44ec51838.jpeg"
+          },
+          "ScreenElement": {
+            "Top": -8,
+            "Left": -8,
+            "Width": 1296,
+            "Height": 1000
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 6,
+          "SemanticName": "Notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Untitled - Notepad",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            }
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "1025535e-ff06-4aa0-b81d-d6f3cc5efbe7",
+          "ActionMethod": {
+            "Name": "Click",
+            "MethodParameters": [
+              {
+                "Argument": "ClientX",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "ClientY",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "Shift",
+                "ArgumentType": "TShiftKey",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": [
+                  "skNoShift",
+                  "skShift",
+                  "skAlt",
+                  "skCtrl"
+                ],
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 6,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\ed521a61-5859-461f-9be5-af54ff155faa.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 491,
+            "Left": 635,
+            "Width": 88,
+            "Height": 23
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 7,
+          "SemanticName": "Não guardar",
+          "SemanticType": "Button",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Don't Save",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "UIAObject(\"Don_t_Save\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "#32770",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "#32770",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Dialog",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "#32770",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "TaskDialog",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "TaskDialog",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Pane",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "DirectUIHWND",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "ab2d8e9e-8079-4f66-b6b9-d31c9000b42a",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": "Testing generic navigation on browser",
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 8,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "27104a72-71c6-40fc-a3ad-1564c0ca405e",
+          "ActionMethod": {
+            "Name": "RunBrowser",
+            "MethodParameters": [
+              {
+                "Argument": "Url",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "www.devfactory.com",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "InPrivate",
+                "ArgumentType": "Boolean",
+                "DisplayType": "Single",
+                "Value": "true",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 3,
+          "Grammar": null,
+          "Notes": null,
+          "PassExecution": 0,
+          "Screen": {
+            "ScreenshotFileName": "Images\\90b979af-83ac-466f-b1f4-806704ff5ef5browser.png"
+          },
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 9,
+          "SemanticName": "Open Browser",
+          "SemanticType": "Browser",
+          "DesiredQuery": null,
+          "ParentQuery": [],
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "e4259476-c16f-4466-a215-a3ead9aaafb8",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "innerText",
+              "Value": "SOFTWARE FACTORY",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 8,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\38301f73-a6f5-47bc-9882-ab340137abd4.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 451,
+            "Left": 103,
+            "Width": 1057,
+            "Height": 116
+          },
+          "Alias": "Aliases.Browser_Browser_iexplore",
+          "AliasLeaf": false,
+          "OrderId": 10,
+          "SemanticName": "SOFTWARE FACTORY",
+          "SemanticType": "Image",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "idStr",
+              "value": "",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "namePropStr",
+              "value": "",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "contentText",
+              "value": "SOFTWARE FACTORY",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "ObjectIdentifier",
+              "value": 1,
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextNode(1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Header",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "heading-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "heading-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "dfc5652e-fbca-49fa-9b73-56064779ac19",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "textContent",
+              "Value": "The DevFactory Offering",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 9,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\4fc4d3d1-2189-4b8a-8011-acae1a505d67.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 244,
+            "Left": 438,
+            "Width": 188,
+            "Height": 25
+          },
+          "Alias": "Aliases.Browser_Browser_iexplore",
+          "AliasLeaf": false,
+          "OrderId": 11,
+          "SemanticName": "The DevFactory Offering",
+          "SemanticType": "Link",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "idStr",
+              "value": "",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "contentText",
+              "value": "The DevFactory Offering",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Link(\\d*)",
+              "type": "Regexp",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Header",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "top-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "top-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Nav",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "4258263c-71af-4e82-9bff-631b5ccbeb12",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "contentText",
+              "Value": "About Us",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 9,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\76fa0be8-7b3c-4b9a-85ea-14f354075ac6.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 244,
+            "Left": 666,
+            "Width": 69,
+            "Height": 25
+          },
+          "Alias": "Aliases.Browser_Browser_iexplore",
+          "AliasLeaf": false,
+          "OrderId": 12,
+          "SemanticName": "About Us",
+          "SemanticType": "Link",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "contentText",
+              "value": "About Us",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Link(\\d*)",
+              "type": "Regexp",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Header",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "holder",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "top-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "top-area",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Nav",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "533f03c4-7a5b-47d6-b9bf-64f5e8ba60e4",
+          "ActionMethod": {
+            "Name": "CloseBrowser",
+            "MethodParameters": []
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 3,
+          "Grammar": null,
+          "Notes": null,
+          "PassExecution": 0,
+          "Screen": {
+            "ScreenshotFileName": "Images\\9010d90f-dee8-420d-9bd1-7c3d58e42ca1browser.png"
+          },
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 13,
+          "SemanticName": "Any",
+          "SemanticType": "Browser",
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "073ffc37-48f1-4aca-8b5a-a6996021bc9d",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": "Testing generic navigation on windows tray bar",
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 14,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "9c533ec9-b736-431c-bc16-ec057b91e66a",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Caption",
+              "Value": "Running applications",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 6,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\2e642706-3b47-4508-8c93-34e08a9063cb.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 984,
+            "Left": 48,
+            "Width": 1055,
+            "Height": 40
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 15,
+          "SemanticName": "Running applications",
+          "SemanticType": "ToolBar",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Running applications",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "className",
+              "value": "MSTaskListWClass",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "ObjectType",
+              "value": "ToolBar",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"explorer\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "ToolWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "ReBarWindow32",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "ReBarWindow32",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "ToolWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "ReBarWindow32",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "MSTaskSwWClass",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "MSTaskSwWClass",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "MSTaskSwWClass",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"explorer\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "7e054524-69a8-434c-bda7-a081ebc9f58a",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Caption",
+              "Value": "Recycle Bin",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 6,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\ca83f48c-417c-45d0-ba5d-fe6f3987256a.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 5,
+            "Left": 0,
+            "Width": 78,
+            "Height": 70
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 16,
+          "SemanticName": "Recycle Bin",
+          "SemanticType": "Icon",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Recycle Bin",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "ListItem(\"Recycle Bin\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"explorer\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Progman",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Progman",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "ToolWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Progman",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "SysListView32",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "SysListView32",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "List",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "SysListView32",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"explorer\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "d3692ee6-dff6-444b-b44c-e8b648af1472",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Caption",
+              "Value": "Desktop",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\848d509e-9a6b-428e-951f-e28b1cb08862.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 0,
+            "Left": 0,
+            "Width": 1280,
+            "Height": 1024
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 17,
+          "SemanticName": "Desktop",
+          "SemanticType": "List",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Desktop",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "WndCaption",
+              "value": "FolderView",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"explorer\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Progman",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Progman",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "ToolWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Progman",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "SHELLDLL_DefView",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"explorer\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "5f234ecf-27d8-46e3-a028-ad1e5bb47aa2",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Visible",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\d3be1d70-f344-4fb9-89a6-b2ebc2994b76.jpeg"
+          },
+          "ScreenElement": {
+            "Top": -5,
+            "Left": 16,
+            "Width": 1904,
+            "Height": 28
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 18,
+          "SemanticName": "C:\\Users\\Carlos\\Documents\\Work\\Factory\\automation-library\\controllers\\alias",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "value",
+              "value": "C:\\Users\\Carlos\\Documents\\Work\\Factory\\automation-library\\controllers\\alias.js (rev2) - Sublime Text (UNREGISTERED)",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "ObjectIdentifier",
+              "value": 1,
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "UIAObject(1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "0c4f41e4-2d4f-4d92-90e5-fcfd9d865771",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Text",
+              "Value": "callMethod.js",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\ac0d059c-31c1-4039-81d5-19dbd71f9fc0.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 158,
+            "Left": 69,
+            "Width": 69,
+            "Height": 13
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 19,
+          "SemanticName": "callMethod.js",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "callMethod.js",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"callMethod.js\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "62adb486-5f81-4947-a49f-e64506a03e91",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\0e639341-8f75-42bf-a44d-861c7af14e4c.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 267,
+            "Left": 325,
+            "Width": 112,
+            "Height": 18
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 20,
+          "SemanticName": "jhgjggjhhjgjgj",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "jhgjggjhhjgjgj",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"jhgjggjhhjgjgj\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "b54e67e7-45cf-4e19-9842-fdb8e1c51291",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\7c9e9757-deb7-43c7-b4ae-02ef3c446292.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 139,
+            "Left": 69,
+            "Width": 35,
+            "Height": 13
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 21,
+          "SemanticName": "bind.js",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "bind.js",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"bind.js\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "f044b927-fa7e-44dc-b636-c18d82f1028a",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\d3ef1987-0e23-40c4-a678-47ced8528ab3.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 142,
+            "Left": 270,
+            "Width": 40,
+            "Height": 18
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 22,
+          "SemanticName": "teste",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "teste",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"teste\", 1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\", 2)",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\", 2)"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "57f336f2-1e3b-4a23-b868-8b4264956ae1",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\3bdcb03c-ae69-42d5-96b4-1de31ad25724.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 267,
+            "Left": 325,
+            "Width": 112,
+            "Height": 18
+          },
+          "Alias": "Aliases.Object_Process_notepad.Form_UIAObject_Sem_ttul.Edit_Window_Edit",
+          "AliasLeaf": false,
+          "OrderId": 23,
+          "SemanticName": "jhgjggjhhjgjgj",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "jhgjggjhhjgjgj",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"jhgjggjhhjgjgj\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "c9e093f6-612e-44ee-aa1d-515e5ebbc335",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "localName",
+              "Value": "div",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 8,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\0c903560-9faa-4be3-a6bd-bc172448fc76.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 336,
+            "Left": 252,
+            "Width": 1266,
+            "Height": 293
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 24,
+          "SemanticName": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro com",
+          "SemanticType": "Panel",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "contentText",
+              "value": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro comercial Moctezuma\nFrancisco Chang\nMexico\nErnst Handel\nRoland Mendel\nAustria\nIsland Trading\nHelen Bennett\nUK\nLaughing Bacchus Winecellars\nYoshi Tannamuri\nCanada\nMagazzini Alimentari Riuniti\nGiovanni Rovelli\nItaly",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Panel(0)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "7dfe7ba5-c06a-49ec-b29a-2e920c0406f9",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "align",
+              "Value": "",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 8,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\8a7f4ac5-53fe-4a73-a0a0-87d920cd0759.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 446,
+            "Left": 252,
+            "Width": 1266,
+            "Height": 293
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 25,
+          "SemanticName": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro com",
+          "SemanticType": "Panel",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "contentText",
+              "value": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro comercial Moctezuma\nFrancisco Chang\nMexico\nErnst Handel\nRoland Mendel\nAustria\nIsland Trading\nHelen Bennett\nUK\nLaughing Bacchus Winecellars\nYoshi Tannamuri\nCanada\nMagazzini Alimentari Riuniti\nGiovanni Rovelli\nItaly",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Panel(0)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "726386c4-6614-4532-b310-700a1e0995cc",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "align",
+              "Value": "",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 9,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\62f50e06-ab35-4b5e-9d11-daa98348950c.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 454,
+            "Left": 268,
+            "Width": 1234,
+            "Height": 277
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 26,
+          "SemanticName": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro com",
+          "SemanticType": "Table",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "idStr",
+              "value": "customers",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "contentText",
+              "value": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro comercial Moctezuma\nFrancisco Chang\nMexico\nErnst Handel\nRoland Mendel\nAustria\nIsland Trading\nHelen Bennett\nUK\nLaughing Bacchus Winecellars\nYoshi Tannamuri\nCanada\nMagazzini Alimentari Riuniti\nGiovanni Rovelli\nItaly",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Table(\"customers\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-white w3-padding notranslate",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-white w3-padding notranslate",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        }
+      ],
+      "Title": null
+    },
+    {
+      "Id": 1011231,
+      "Notes": null,
+      "TestCaseElements": [
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "fc55e066-6fe9-4268-8bcd-f0fd081dfb2a",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": "Test Generic Expression Navigation",
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 1,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "d43ba2a2-b44f-4609-983d-c7f9b49297ab",
+          "ActionMethod": {
+            "Name": "OpenExplorerItem",
+            "MethodParameters": [
+              {
+                "Argument": "FullPath",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "notepad",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 3,
+          "Grammar": null,
+          "Notes": null,
+          "PassExecution": 0,
+          "Screen": {
+            "ScreenshotFileName": "Images\\4db93510-7de0-45c0-b2e2-5066325837b8fileAction.jpg"
+          },
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 2,
+          "SemanticName": "notepad",
+          "SemanticType": "File",
+          "DesiredQuery": null,
+          "ParentQuery": [],
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "db466239-dfd9-4d5c-9fb2-a0150f606092",
+          "ActionMethod": {
+            "Name": "Maximize",
+            "MethodParameters": []
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 3,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\b8be6e4a-a62e-4e44-aa6f-3a1c9ee676e6.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 145,
+            "Left": 15,
+            "Width": 1036,
+            "Height": 624
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 3,
+          "SemanticName": "Untitled - Notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Caption",
+              "value": "Untitled - Notepad",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            }
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "2c23de9d-9f57-4f51-b2e5-4f1a541c2653",
+          "ActionMethod": {
+            "Name": "Keys",
+            "MethodParameters": [
+              {
+                "Argument": "Keys",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "Test[Enter][Enter][Enter][Enter]Test",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\2cc1b184-643f-400b-9941-b14197091f80.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 43,
+            "Left": 0,
+            "Width": 1280,
+            "Height": 941
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 4,
+          "SemanticName": "Empty notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Text",
+              "value": "",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Window(\"Edit\", \"\", 1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "f7e027bf-ee75-41ca-a421-52772e139f15",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Text",
+              "Value": "Test",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            },
+            {
+              "Name": "Top",
+              "Value": 3,
+              "ValueType": "number",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": "{\"expressionType\":\"number\",\"expressionValue\":\"<5\",\"expressionOrigin\":\"validation\"}",
+              "IsExpression": true,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "2"
+            },
+            {
+              "Name": "ScreenLeft",
+              "Value": 7,
+              "ValueType": "number",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": "{\"expressionType\":\"number\",\"expressionValue\":\"<10\",\"expressionOrigin\":\"validation\"}",
+              "IsExpression": true,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "2"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\1eb291e8-3455-4f0d-b92e-6e8e73f2b24c.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 46,
+            "Left": 7,
+            "Width": 32,
+            "Height": 18
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 5,
+          "SemanticName": "Test",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Top",
+              "value": "{\"expressionType\":\"number\",\"expressionValue\":\"<5\",\"expressionOrigin\":\"navigation\"}",
+              "type": "Expression",
+              "valueType": "Integer"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "6b9e45e0-4a29-43ed-8efd-d58d099a85a4",
+          "ActionMethod": {
+            "Name": "CreateVariableFromProperty",
+            "MethodParameters": [
+              {
+                "Argument": "VarName",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "varTop",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "Property",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "Top",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "Regex",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "ReplaceWhat",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "ReplaceTo",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\883d1f12-0c0c-4adb-9e5f-e828ac125439.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 46,
+            "Left": 7,
+            "Width": 32,
+            "Height": 18
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 6,
+          "SemanticName": "Test",
+          "SemanticType": "Label",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"Test\", 1)",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "9a510b02-3a89-41ef-b709-dc68702b6710",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Text",
+              "Value": "Test",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\e48d8293-6526-4154-9be7-988b73501f4c.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 118,
+            "Left": 7,
+            "Width": 32,
+            "Height": 18
+          },
+          "Alias": "Aliases.Object_notepad",
+          "AliasLeaf": false,
+          "OrderId": 7,
+          "SemanticName": "Test",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Text",
+              "value": "Test",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Top",
+              "value": "{\"expressionType\":\"number\",\"expressionValue\":\">$var(varTop)\",\"expressionOrigin\":\"navigation\"}",
+              "type": "Expression",
+              "valueType": "Integer"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Notepad",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Notepad",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Edit",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Edit",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "5d791bde-4d4b-4c49-ba75-845e5d7dd75d",
+          "ActionMethod": {
+            "Name": "Close",
+            "MethodParameters": [
+              {
+                "Argument": "WaitTimeout",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 3,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\433be599-5854-475c-a06e-68f44ec51838.jpeg"
+          },
+          "ScreenElement": {
+            "Top": -8,
+            "Left": -8,
+            "Width": 1296,
+            "Height": 1000
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 8,
+          "SemanticName": "Notepad",
+          "SemanticType": "Form",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Untitled - Notepad",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            }
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "384c0145-64cc-41f6-8cd8-6684644388be",
+          "ActionMethod": {
+            "Name": "Click",
+            "MethodParameters": [
+              {
+                "Argument": "ClientX",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "ClientY",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "Shift",
+                "ArgumentType": "TShiftKey",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": [
+                  "skNoShift",
+                  "skShift",
+                  "skAlt",
+                  "skCtrl"
+                ],
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 6,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\ed521a61-5859-461f-9be5-af54ff155faa.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 491,
+            "Left": 635,
+            "Width": 88,
+            "Height": 23
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 9,
+          "SemanticName": "Não guardar",
+          "SemanticType": "Button",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "Don't Save",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "UIAObject(\"Don_t_Save\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"notepad\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "#32770",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "#32770",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Dialog",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "#32770",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "TaskDialog",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "TaskDialog",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Pane",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "DirectUIHWND",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "CtrlNotifySink",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"notepad\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "3512d757-c5fa-45ac-af55-7536045e72bc",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": "Test Date Expression Navigation",
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 10,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "8c5706ac-6073-4773-a761-406aac3a277f",
+          "ActionMethod": {
+            "Name": "SystemClick",
+            "MethodParameters": [
+              {
+                "Argument": "ClientX",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "ClientY",
+                "ArgumentType": "Integer",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              },
+              {
+                "Argument": "Shift",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "",
+                "Choices": null,
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\a73a6b1f-3724-467d-92ef-a3a7c3f89f8d.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 986,
+            "Left": 1202,
+            "Width": 70,
+            "Height": 37
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 11,
+          "SemanticName": "Date",
+          "SemanticType": "Calendar",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Caption",
+              "value": "{\"expressionType\":\"datetime\",\"expressionValue\":\"=currdate.asformat(\\\"\\\\d+:\\\\d+ (AM|PM),.*\\\"%A,\\\".*\\\"%#m\\\"\\\\/.*\\\"%#d\\\"\\\\/.*\\\"%Y).asregex\",\"expressionOrigin\":\"navigation\"}",
+              "type": "Expression",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"explorer\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "ToolWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "Shell_TrayWnd",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "TrayNotifyWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "TrayNotifyWnd",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "TrayNotifyWnd",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"explorer\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "e47f222d-10b1-4e9d-b5cb-6d96d59081fc",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Text",
+              "Value": "‎Tuesday, ‎September ‎27, ‎2016",
+              "ValueType": "string",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": "{\"expressionType\":\"datetime\",\"expressionValue\":\"=currdate.asformat(%A,\\\".*\\\"%B\\\".*\\\"%#d,\\\".*\\\"%Y).asregex\",\"expressionOrigin\":\"validation\"}",
+              "IsExpression": true,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "2"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 5,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\0bf015db-7b32-4f9e-871e-f28dbfba397f.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 735,
+            "Left": 1020,
+            "Width": 152,
+            "Height": 15
+          },
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 12,
+          "SemanticName": "‎Date",
+          "SemanticType": "Calendar",
+          "DesiredQuery": [
+            {
+              "name": "Exists",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "Enabled",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "{\"expressionType\":\"datetime\",\"expressionValue\":\"=currdate.asformat(%A,\\\".*\\\"%B\\\".*\\\"%#d,\\\".*\\\"%Y).asregex\",\"expressionOrigin\":\"navigation\"}",
+              "type": "Expression",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": [],
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"explorer\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "ClockFlyoutWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "ClockFlyoutWindow",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "ClockFlyoutWindow",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "HWNDElement",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "HWNDElement",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "DirectUIHWND",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"explorer\")"
+        }
+      ],
+      "Title": null
+    },
+    {
+      "Id": 1,
+      "Notes": null,
+      "TestCaseElements": [
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "6adbf0f4-8c9b-41b9-9f07-e4b8dc3ed182",
+          "ActionMethod": null,
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 0,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 6,
+          "Grammar": null,
+          "Notes": null,
+          "PassExecution": 0,
+          "Screen": null,
+          "ScreenElement": null,
+          "Alias": null,
+          "AliasLeaf": false,
+          "OrderId": 1,
+          "SemanticName": null,
+          "SemanticType": null,
+          "DesiredQuery": null,
+          "ParentQuery": null,
+          "Hierarchy": null,
+          "Process": null
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "38a2983e-d79c-421c-a218-bf4fb67429ec",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\c9077c05-7f34-4c04-a547-a8632321c126.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 128,
+            "Left": 69,
+            "Width": 35,
+            "Height": 13
+          },
+          "Alias": "Aliases.Object_Process_sublime_text.Form_UIAObject_C_Users_Carlos_Documents_Work",
+          "AliasLeaf": false,
+          "OrderId": 2,
+          "SemanticName": "bind.js",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "bind.js",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"bind.js\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "9178ed97-b955-47e3-add0-6b8d39dfb1e9",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\5a10e235-b33d-4728-a772-2ecc64a82ce4.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 56,
+            "Left": 363,
+            "Width": 83,
+            "Height": 13
+          },
+          "Alias": "Aliases.Object_Process_sublime_text",
+          "AliasLeaf": false,
+          "OrderId": 3,
+          "SemanticName": "AureaGCEgrid.js",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "AureaGCEgrid.js",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"AureaGCEgrid.js\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "ac06f370-9a61-4be3-a920-2ecb2d3cf69b",
+          "ActionMethod": null,
+          "ValidationProperties": [
+            {
+              "Name": "Exists",
+              "Value": true,
+              "ValueType": "boolean",
+              "Regex": null,
+              "IsRegex": false,
+              "Expression": null,
+              "IsExpression": false,
+              "ComboList": [
+                "-",
+                "Regex",
+                "Expression"
+              ],
+              "ComboTypeString": "0"
+            }
+          ],
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": false,
+          "RegionOcrType": 2,
+          "Depth": 4,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 1,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\50d3a06d-e982-4814-a79c-26cb340ae68d.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 128,
+            "Left": 69,
+            "Width": 35,
+            "Height": 13
+          },
+          "Alias": "Aliases.Object_Process_sublime_text",
+          "AliasLeaf": false,
+          "OrderId": 4,
+          "SemanticName": "bind.js",
+          "SemanticType": "",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "text",
+              "value": "bind.js",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "TextObject(\"bind.js\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Process(\"sublime_text\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "className",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Form",
+                "Type": "string"
+              },
+              {
+                "Name": "WndClass",
+                "Value": "PX_WINDOW_CLASS",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Process(\"sublime_text\")"
+        },
+        {
+          "QCStatus": 0,
+          "IfWhile": 8,
+          "DisableMSAA": false,
+          "Key": "b6e77ee9-0ecd-4702-b628-db3998416387",
+          "ActionMethod": {
+            "Name": "CreateVariableFromRowCount",
+            "MethodParameters": [
+              {
+                "Argument": "VariableName",
+                "ArgumentType": "String",
+                "DisplayType": "Single",
+                "Value": "myRowCount",
+                "Choices": [],
+                "SelectedChoices": null,
+                "IsRegex": false,
+                "IsExpression": false,
+                "ComboTypeString": "0"
+              }
+            ]
+          },
+          "ValidationProperties": null,
+          "NavigationProperties": null,
+          "NavigationFlag": false,
+          "WrapFlag": true,
+          "RegionOcrType": 2,
+          "Depth": 9,
+          "OcrRegionText": null,
+          "DisposingValidation": false,
+          "ActionValidationType": 0,
+          "Grammar": {
+            "ItemType": 0,
+            "Name": null,
+            "Arguments": null
+          },
+          "Notes": null,
+          "PassExecution": 2,
+          "Screen": {
+            "ScreenshotFileName": "Images\\8c089bbc-5f32-4f33-9436-19e9c1880492.jpeg"
+          },
+          "ScreenElement": {
+            "Top": 454,
+            "Left": 268,
+            "Width": 1234,
+            "Height": 277
+          },
+          "Alias": "",
+          "AliasLeaf": false,
+          "OrderId": 5,
+          "SemanticName": "Company\nContact\nCountry\nAlfreds Futterkiste\nMaria Anders\nGermany\nCentro com",
+          "SemanticType": "Box",
+          "DesiredQuery": [
+            {
+              "name": "VisibleOnScreen",
+              "value": true,
+              "type": "Normal",
+              "valueType": "Boolean"
+            },
+            {
+              "name": "idStr",
+              "value": "customers",
+              "type": "Normal",
+              "valueType": "String"
+            },
+            {
+              "name": "Name",
+              "value": "Table(\"customers\")",
+              "type": "Normal",
+              "valueType": "String"
+            }
+          ],
+          "ParentQuery": null,
+          "Hierarchy": [
+            {
+              "Name": "FullName",
+              "Value": "Sys.Browser(\"iexplore\")",
+              "Type": "Normal"
+            },
+            [
+              {
+                "Name": "ObjectType",
+                "Value": "Page",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-main w3-light-grey",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-row w3-white",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-col l10 m12",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-example",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ],
+            [
+              {
+                "Name": "className",
+                "Value": "w3-white w3-padding notranslate",
+                "Type": "string"
+              },
+              {
+                "Name": "ClassName",
+                "Value": "w3-white w3-padding notranslate",
+                "Type": "string"
+              },
+              {
+                "Name": "ObjectType",
+                "Value": "Panel",
+                "Type": "string"
+              }
+            ]
+          ],
+          "Process": "Sys.Browser(\"iexplore\")"
+        }
+      ],
+      "Title": null
+    }
+  ],
+  "Locals": [
+    {
+      "Key": "TSRepo",
+      "Value": -1,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "TSProduct",
+      "Value": -1,
+      "Type": 2,
+      "Enabled": false
+    },
+    {
+      "Key": "TSBuild",
+      "Value": -1,
+      "Type": 2,
+      "Enabled": false
+    }
+  ],
+  "PreConditionFilesCollection": [],
+  "Properties": [
+    {
+      "Property": "Caption",
+      "Enabled": true
+    },
+    {
+      "Property": "caption",
+      "Enabled": true
+    },
+    {
+      "Property": "WndCaption",
+      "Enabled": true
+    },
+    {
+      "Property": "WPFControlText",
+      "Enabled": true
+    },
+    {
+      "Property": "wText",
+      "Enabled": true
+    },
+    {
+      "Property": "wLabel",
+      "Enabled": true
+    },
+    {
+      "Property": "wButtonText",
+      "Enabled": true
+    },
+    {
+      "Property": "wTabCaption",
+      "Enabled": true
+    },
+    {
+      "Property": "wLinkText",
+      "Enabled": true
+    },
+    {
+      "Property": "idStr",
+      "Enabled": true
+    },
+    {
+      "Property": "namePropStr",
+      "Enabled": true
+    },
+    {
+      "Property": "toolTipText",
+      "Enabled": true
+    },
+    {
+      "Property": "ToolTip",
+      "Enabled": true
+    },
+    {
+      "Property": "text",
+      "Enabled": true
+    },
+    {
+      "Property": "Text",
+      "Enabled": true
+    },
+    {
+      "Property": "value",
+      "Enabled": true
+    },
+    {
+      "Property": "Value",
+      "Enabled": true
+    },
+    {
+      "Property": "contentText",
+      "Enabled": true
+    },
+    {
+      "Property": "ObjectIdentifier",
+      "Enabled": true
+    },
+    {
+      "Property": "ObjectLabel",
+      "Enabled": true
+    },
+    {
+      "Property": "URL",
+      "Enabled": true
+    },
+    {
+      "Property": "Name",
+      "Enabled": true
+    },
+    {
+      "Property": "AWTComponentAccessibleName",
+      "Enabled": true
+    },
+    {
+      "Property": "ProcessName",
+      "Enabled": true
+    }
+  ]
+}

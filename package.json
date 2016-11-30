@@ -1,0 +1,21 @@
+{
+  "name": "json-orm",
+  "version": "0.0.1",
+  "description": "Manipulate json files using common orm language",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test --recursive",
+    "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R tap test/**/*.js > test.tap && node node_modules/istanbul/lib/cli.js report clover"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.2",
+    "lodash.set": "^4.3.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0"
+  }
+}
