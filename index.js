@@ -17,10 +17,16 @@ function jsonorm(json) {
      * @return {Array} Array of path references to the objects
      */
     this.find = function(query) {
-        if(!this.data){
-            throw("You need to load the json first");
+        if (!this.data) {
+            throw ("You need to load the json first");
         }
-        this.foundObjects = _find(this.data, query);
+        if (query.length) {
+            for (var n in query) {
+                this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
+            }
+        } else {
+            this.foundObjects = _find(this.data, query);
+        }
         return this.foundObjects;
     };
 
@@ -31,8 +37,8 @@ function jsonorm(json) {
      * @return {Boolean}       Boolean return
      */
     this.update = function(path, newObj) {
-        if(!this.data){
-            throw("You need to load the json first");
+        if (!this.data) {
+            throw ("You need to load the json first");
         }
         this.data = _update(this.data, path, newObj);
     };
@@ -45,8 +51,8 @@ function jsonorm(json) {
      * @return {Boolean} If insert is successfull
      */
     this.insert = function(path, newObj, before) {
-        if(!this.data){
-            throw("You need to load the json first");
+        if (!this.data) {
+            throw ("You need to load the json first");
         }
         this.data = _insert(this.data, path, newObj, before);
     };
@@ -59,8 +65,8 @@ function jsonorm(json) {
      * @return {Boolean} If insert is successfull
      */
     this.remove = function(path) {
-        if(!this.data){
-            throw("You need to load the json first");
+        if (!this.data) {
+            throw ("You need to load the json first");
         }
         this.data = _remove(this.data, path);
     };
@@ -71,8 +77,8 @@ function jsonorm(json) {
      * @return {Object}      The object
      */
     this.getObject = function(path) {
-        if(!this.data){
-            throw("You need to load the json first");
+        if (!this.data) {
+            throw ("You need to load the json first");
         }
         return common.getObjectFromPath(this.data, path);
     };
