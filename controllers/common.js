@@ -43,9 +43,6 @@ module.exports = {
         _.set(obj, path, newObj);
         return obj;
     },
-    parent: function(path){
-        return path.replace(/\.[a-zA-Z0-9]*$/, '');
-    },
     match: function(obj, query) {
         var tmpObj;
         for (var i = 0; i < query.length; i++) {

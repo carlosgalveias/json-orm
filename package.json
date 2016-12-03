@@ -1,6 +1,6 @@
 {
   "name": "json-orm",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "Manipulate json files using common orm language",
   "main": "index.js",
   "scripts": {

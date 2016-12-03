@@ -8,8 +8,7 @@ function jsonorm(json) {
 
     var object = {};
     this.data = json ? JSON.parse(json) : null;
-
-    var foundObjects = [];
+    this.foundObjects = [];
 
     /**
      * Finds the key path of the ojbect(s) being queried
@@ -82,6 +81,19 @@ function jsonorm(json) {
         }
         return common.getObjectFromPath(this.data, path);
     };
+
+    this.setObject = function(path, object) {
+        if (!this.data) {
+            throw ("You need to load the json first");
+        }
+        if (!path) {
+            throw ("Cannot set object without path");
+        }
+        this.data = common.setObjectFromPath(this.data, path, object);
+        return this.data;
+    };
+
+
     return this;
 }
 
