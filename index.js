@@ -111,6 +111,10 @@ function jsonorm(json) {
         return this.data;
     };
 
+    this.getParent = function(path) {
+        return common.getParent(path);
+    };
+
 
     return this;
 }
