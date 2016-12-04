@@ -39,7 +39,13 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        this.data = _update(this.data, path, newObj);
+        if (path.length && path.length > 0) {
+            path.forEach(p => {
+                this.data = _update(this.data, p, newObj);
+            });
+        } else {
+            this.data = _update(this.data, path, newObj);
+        }
     };
 
     /**
@@ -53,7 +59,13 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        this.data = _insert(this.data, path, newObj, before);
+        if (path.length && path.length > 0) {
+            path.forEach(p => {
+                this.data = _insert(this.data, p, newObj, before);
+            });
+        } else {
+            this.data = _insert(this.data, path, newObj, before);
+        }
     };
 
     /**
@@ -67,7 +79,13 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        this.data = _remove(this.data, path);
+        if (path.length && path.length > 0) {
+            path.forEach(p => {
+                this.data = _remove(this.data, path);
+            });
+        } else {
+            this.data = _remove(this.data, path);
+        }
     };
 
     /**
