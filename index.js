@@ -81,10 +81,10 @@ function jsonorm(json) {
         }
         if (path.length && path.length > 0) {
             path.forEach(p => {
-                this.data = _remove(this.data, p);
+                _remove(this.data, p);
             });
         } else {
-            this.data = _remove(this.data, path);
+            _remove(this.data, path);
         }
     };
 
