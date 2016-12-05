@@ -19,7 +19,7 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        if (query.length) {
+        if (typeof(query[0]) === "object") {
             for (var n in query) {
                 this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
             }
@@ -39,7 +39,7 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        if (path.length && path.length > 0) {
+        if (typeof(path) === "object" && path.length > 0) {
             path.forEach(p => {
                 this.data = _update(this.data, p, newObj);
             });
@@ -59,7 +59,7 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        if (path.length && path.length > 0) {
+        if (typeof(path) === "object" && path.length > 0) {
             path.forEach(p => {
                 this.data = _insert(this.data, p, newObj, before);
             });
@@ -79,7 +79,7 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        if (path.length && path.length > 0) {
+        if (typeof(path) === "object" && path.length > 0) {
             path.forEach(p => {
                 _remove(this.data, p);
             });
