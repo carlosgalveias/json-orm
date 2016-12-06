@@ -81,7 +81,7 @@ module.exports = {
                         return false;
                     }
                     break;
-                case 'regex':
+                case 'regexp':
                     var r = new RegExp(condition.value);
                     if (!r.test(testObj)) {
                         return false;

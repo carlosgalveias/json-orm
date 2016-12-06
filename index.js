@@ -19,7 +19,7 @@ function jsonorm(json) {
         if (!this.data) {
             throw ("You need to load the json first");
         }
-        if (typeof(query[0]) === "object") {
+        if (query.length) {
             for (var n in query) {
                 this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
             }
