@@ -1,82 +1,21 @@
 {
-  "_args": [
-    [
-      {
-        "raw": "json-orm@0.0.8",
-        "scope": null,
-        "escapedName": "json-orm",
-        "name": "json-orm",
-        "rawSpec": "0.0.8",
-        "spec": "0.0.8",
-        "type": "version"
-      },
-      "C:\\Users\\carlo\\Desktop\\Work\\git\\sequence_fix"
-    ]
-  ],
-  "_from": "json-orm@0.0.8",
-  "_id": "json-orm@0.0.8",
-  "_inCache": true,
-  "_installable": true,
-  "_location": "/json-orm",
-  "_nodeVersion": "4.2.4",
-  "_npmOperationalInternal": {
-    "host": "packages-12-west.internal.npmjs.com",
-    "tmp": "tmp/json-orm-0.0.8.tgz_1480814165722_0.7028374203946441"
+  "name": "json-orm",
+  "version": "0.0.10",
+  "description": "Manipulate json files using common orm language",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha test --recursive",
+    "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R tap test/**/*.js > test.tap && node node_modules/istanbul/lib/cli.js report clover"
   },
-  "_npmUser": {
-    "name": "carlosgalveias",
-    "email": "info@codethencloud.com"
-  },
-  "_npmVersion": "3.10.9",
-  "_phantomChildren": {},
-  "_requested": {
-    "raw": "json-orm@0.0.8",
-    "scope": null,
-    "escapedName": "json-orm",
-    "name": "json-orm",
-    "rawSpec": "0.0.8",
-    "spec": "0.0.8",
-    "type": "version"
-  },
-  "_requiredBy": [
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/json-orm/-/json-orm-0.0.8.tgz",
-  "_shasum": "5dc87091cbd8418e4b56ead0971b43dbdf8f3df9",
-  "_shrinkwrap": null,
-  "_spec": "json-orm@0.0.8",
-  "_where": "C:\\Users\\carlo\\Desktop\\Work\\git\\sequence_fix",
   "author": "",
+  "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.2",
     "lodash.set": "^4.3.2",
     "path": "^0.12.7"
   },
-  "description": "Manipulate json files using common orm language",
   "devDependencies": {
     "istanbul": "^0.4.5",
     "mocha": "^3.2.0"
-  },
-  "directories": {},
-  "dist": {
-    "shasum": "5dc87091cbd8418e4b56ead0971b43dbdf8f3df9",
-    "tarball": "https://registry.npmjs.org/json-orm/-/json-orm-0.0.8.tgz"
-  },
-  "gitHead": "d31de4d87ce67642fe9ab82ceb9f52eae950cdf1",
-  "license": "ISC",
-  "main": "index.js",
-  "maintainers": [
-    {
-      "name": "carlosgalveias",
-      "email": "info@codethencloud.com"
-    }
-  ],
-  "name": "json-orm",
-  "optionalDependencies": {},
-  "readme": "ERROR: No README data found!",
-  "scripts": {
-    "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R tap test/**/*.js > test.tap && node node_modules/istanbul/lib/cli.js report clover",
-    "test": "node ./node_modules/mocha/bin/mocha test --recursive"
-  },
-  "version": "0.0.8"
+  }
 }
