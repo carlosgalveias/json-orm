@@ -16,19 +16,21 @@ function jsonorm(json) {
      * @return {Array} Array of path references to the objects
      */
     this.find = function(query) {
-        if (!this.data) {
-            throw ("You need to load the json first");
-        }
-        if (typeof(query[0]) === "object") {
-            for (var n in query) {
-                this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
+        return new Promise((resolve, reject) => {
+            if (!this.data) {
+                var stack = JSON.stringify(this);
+                reject("You need to load the json first\n" + stack);
             }
-        } else {
-            this.foundObjects = _find(this.data, query);
-        }
-        return this.foundObjects;
+            if (query.length) {
+                for (var n in query) {
+                    this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
+                }
+            } else {
+                this.foundObjects = _find(this.data, query);
+            }
+            resolve(this.foundObjects);
+        });
     };
-
     /**
      * Updates the object with the new object
      * @param  {String} path   The object path to update
@@ -36,16 +38,19 @@ function jsonorm(json) {
      * @return {Boolean}       Boolean return
      */
     this.update = function(path, newObj) {
-        if (!this.data) {
-            throw ("You need to load the json first");
-        }
-        if (typeof(path) === "object" && path.length > 0) {
-            path.forEach(p => {
-                this.data = _update(this.data, p, newObj);
-            });
-        } else {
-            this.data = _update(this.data, path, newObj);
-        }
+        return new Promise((resolve, reject) => {
+            if (!this.data) {
+                reject("You need to load the json first");
+            }
+            if (typeof(path) === "object" && path.length > 0) {
+                path.forEach(p => {
+                    this.data = _update(this.data, p, newObj);
+                });
+            } else {
+                this.data = _update(this.data, path, newObj);
+            }
+            resolve();
+        });
     };
 
     /**
@@ -56,16 +61,19 @@ function jsonorm(json) {
      * @return {Boolean} If insert is successfull
      */
     this.insert = function(path, newObj, before) {
-        if (!this.data) {
-            throw ("You need to load the json first");
-        }
-        if (typeof(path) === "object" && path.length > 0) {
-            path.forEach(p => {
-                this.data = _insert(this.data, p, newObj, before);
-            });
-        } else {
-            this.data = _insert(this.data, path, newObj, before);
-        }
+        return new Promise((resolve, reject) => {
+            if (!this.data) {
+                reject("You need to load the json first");
+            }
+            if (typeof(path) === "object" && path.length > 0) {
+                path.forEach(p => {
+                    this.data = _insert(this.data, p, newObj, before);
+                });
+            } else {
+                this.data = _insert(this.data, path, newObj, before);
+            }
+            resolve();
+        });
     };
 
     /**
@@ -76,16 +84,19 @@ function jsonorm(json) {
      * @return {Boolean} If insert is successfull
      */
     this.remove = function(path) {
-        if (!this.data) {
-            throw ("You need to load the json first");
-        }
-        if (typeof(path) === "object" && path.length > 0) {
-            path.forEach(p => {
-                _remove(this.data, p);
-            });
-        } else {
-            _remove(this.data, path);
-        }
+        return new Promise((resolve, reject) => {
+            if (!this.data) {
+                reject("You need to load the json first");
+            }
+            if (typeof(path) === "object" && path.length > 0) {
+                path.forEach(p => {
+                    _remove(this.data, p);
+                });
+            } else {
+                _remove(this.data, path);
+            }
+            resolve();
+        });
     };
 
     /**
