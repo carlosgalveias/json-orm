@@ -5,8 +5,11 @@ function jsonorm(json) {
   var _insert = require(path.join(__dirname, 'controllers/insert.js'));
   var _remove = require(path.join(__dirname, 'controllers/remove.js'));
   var _update = require(path.join(__dirname, 'controllers/update.js'));
-  
-  this.data = json ? JSON.parse(json) : null;
+  try {
+    this.data = json ? JSON.parse(json) : null;
+  } catch (e) {
+    this.data = json
+  }
   this.foundObjects = [];
   /**
    * Finds the key path of the ojbect(s) being queried
@@ -19,8 +22,49 @@ function jsonorm(json) {
         var stack = JSON.stringify(this);
         reject("You need to load the json first\n" + stack);
       }
+      if (query.and) {
+        // TODO , find objects that match >1 query within
+        let foundQueries = [];
+        var matchedObjects = [];
+        for (var n = 0; n < query.and.length; n++) {
+          foundQueries = foundQueries.concat(_find(this.data, query.and[n]));
+        }
+        foundQueries.forEach(f => {
+          var obj = common.getObjectFromPath(this.data, f);
+          let match = true;
+          query.and.forEach(q => {
+            if (!common.match(obj, q)) {
+              match = false;
+            }
+          });
+          if (match && matchedObjects.indexOf(f) === -1) {
+            matchedObjects.push(f);
+          }
+        });
+        return resolve(matchedObjects);
+      } else if (query.or) {
+        // TODO , find objects that match >1 query within
+        let foundQueries = [];
+        let matchedObjects = [];
+        for (let n = 0; n < query.or.length; n++) {
+          foundQueries = foundQueries.concat(_find(this.data, query.or[n]));
+        }
+        foundQueries.forEach(f => {
+          var obj = common.getObjectFromPath(this.data, f);
+          let match = false;
+          query.or.forEach(q => {
+            if (common.match(obj, q)) {
+              match = true;
+            }
+          });
+          if (match && matchedObjects.indexOf(f) === -1) {
+            matchedObjects.push(f);
+          }
+        });
+        return resolve(matchedObjects);
+      }
       if (query.length) {
-        for (var n in query) {
+        for (let n in query) {
           this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
         }
       } else {

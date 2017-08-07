@@ -15,11 +15,27 @@ var instance = new jorm(json)
 #### Find
 Uses a query to find a element , example query:
 ```
-var query = [{  
+var query = {  
 keyName: 'name',  
 type: 'normal' (default) or 'regex',  
 value: {value} or '*'  
-}]
+}
+```
+you can also search with 'and' or 'or' objects:
+
+```
+query = { 
+	and/or : [{  
+		keyName: 'First Name',  
+		type: 'normal' (default) or 'regex',  
+		value: {value} or '*'  
+		},
+		{  
+		keyName: 'Last Name',  
+		type: 'normal' (default) or 'regex',  
+		value: {value} or '*'  
+	}]
+}
 ```
 
 var foundObjects = instance.find(query);
