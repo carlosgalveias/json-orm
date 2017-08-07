@@ -1,14 +1,13 @@
-var jsonorm = function (json) {
+function jsonorm(json) {
   var path = require('path');
   var common = require(path.join(__dirname, 'controllers/common.js'));
   var _find = require(path.join(__dirname, 'controllers/find.js'));
   var _insert = require(path.join(__dirname, 'controllers/insert.js'));
   var _remove = require(path.join(__dirname, 'controllers/remove.js'));
   var _update = require(path.join(__dirname, 'controllers/update.js'));
-
-  this.data = json ? (typeof (json) === 'string' ? JSON.parse(json) : json) : null;
+  
+  this.data = json ? JSON.parse(json) : null;
   this.foundObjects = [];
-
   /**
    * Finds the key path of the ojbect(s) being queried
    * @param  {Object} query The search query
@@ -18,7 +17,7 @@ var jsonorm = function (json) {
     return new Promise((resolve, reject) => {
       if (!this.data) {
         var stack = JSON.stringify(this);
-        reject(new Error('You need to load the json first\n' + stack));
+        reject("You need to load the json first\n" + stack);
       }
       if (query.length) {
         for (var n in query) {
@@ -39,9 +38,9 @@ var jsonorm = function (json) {
   this.update = function (path, newObj) {
     return new Promise((resolve, reject) => {
       if (!this.data) {
-        reject(new Error('You need to load the json first'));
+        reject("You need to load the json first");
       }
-      if (typeof (path) === 'object' && path.length > 0) {
+      if (typeof (path) === "object" && path.length > 0) {
         path.forEach(p => {
           this.data = _update(this.data, p, newObj);
         });
@@ -51,7 +50,6 @@ var jsonorm = function (json) {
       resolve();
     });
   };
-
   /**
    * Inserts a new object before or after our path object
    * @param  {String} path   The path for our reference object
@@ -62,9 +60,9 @@ var jsonorm = function (json) {
   this.insert = function (path, newObj, before) {
     return new Promise((resolve, reject) => {
       if (!this.data) {
-        reject(new Error('You need to load the json first'));
+        reject("You need to load the json first");
       }
-      if (typeof (path) === 'object' && path.length > 0) {
+      if (typeof (path) === "object" && path.length > 0) {
         path.forEach(p => {
           this.data = _insert(this.data, p, newObj, before);
         });
@@ -74,7 +72,6 @@ var jsonorm = function (json) {
       resolve();
     });
   };
-
   /**
    * Inserts a new object before or after our path object
    * @param  {String} path   The path for our reference object
@@ -85,9 +82,9 @@ var jsonorm = function (json) {
   this.remove = function (path) {
     return new Promise((resolve, reject) => {
       if (!this.data) {
-        reject(new Error('You need to load the json first'));
+        reject("You need to load the json first");
       }
-      if (typeof (path) === 'object' && path.length > 0) {
+      if (typeof (path) === "object" && path.length > 0) {
         path.forEach(p => {
           _remove(this.data, p);
         });
@@ -97,7 +94,6 @@ var jsonorm = function (json) {
       resolve();
     });
   };
-
   /**
    * Gets the json object from a given path
    * @param  {String} path Path for the object
@@ -105,27 +101,23 @@ var jsonorm = function (json) {
    */
   this.getObject = function (path) {
     if (!this.data) {
-      throw (new Error('You need to load the json first'));
+      throw ("You need to load the json first");
     }
     return common.getObjectFromPath(this.data, path);
   };
-
   this.setObject = function (path, object) {
     if (!this.data) {
-      throw (new Error('You need to load the json first'));
+      throw ("You need to load the json first");
     }
     if (!path) {
-      throw (new Error('Cannot set object without path'));
+      throw ("Cannot set object without path");
     }
     this.data = common.setObjectFromPath(this.data, path, object);
     return this.data;
   };
-
   this.getParent = function (path) {
     return common.getParent(path);
   };
-
   return this;
-};
-
+}
 module.exports = jsonorm;
