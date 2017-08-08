@@ -38,7 +38,8 @@ query = {
 }
 ```
 
-var foundObjects = instance.find(query);
+instance.find(query).then(foundObjects)	// find returns a promise
+var foundObjects = instance.findSync(query); // findSync is asynchronous
 
 Returns an array of strings with the objects path within the main json objects, example:
 ```
@@ -61,7 +62,8 @@ var updateObj = [{
 	value: {obj: { obj2 : {obj3 : 'a'}}}  
 }]  
 
-instance.update(foundObjects[0], updateObj)  
+// for sync execution use updateSync
+update(foundObjects[0], updateObj).then()  
 ```
 
 Objects can also be updated by simply changing properties of a object retrieved by 'getObject' as the object returned is a reference.
@@ -72,7 +74,7 @@ if we want to insert before.
 
 Example insert object:
 ```
-instance.insert('path for sibling','object to insert','before: boolean')  
+instance.insert('path for sibling','object to insert','before: boolean').then() // Use insertSync for sync  
 ```
 
 #### Delete:
