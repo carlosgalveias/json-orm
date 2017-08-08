@@ -67,24 +67,24 @@ module.exports = {
     // dot notation key name
     var testObj = tmpObj ? tmpObj : obj[condition.keyName];
     switch (condition.type) {
-    case 'eval':
-      var ret;
-      eval('ret = testObj ' + condition.value);
-      if (!ret) {
-        return false;
-      }
-      break;
-    case 'regexp':
-      var r = new RegExp(condition.value);
-      if (!r.test(testObj)) {
-        return false;
-      }
-      break;
-    default:
-      if (testObj === condition.value) {
-        return true;
-      }
+      case 'eval':
+        var ret;
+        eval('ret = testObj ' + condition.value);
+        if (!ret) {
+          return false;
+        }
+        break;
+      case 'regexp':
+        var r = new RegExp(condition.value);
+        if (!r.test(testObj)) {
+          return false;
+        }
+        break;
+      default:
+        if (testObj === condition.value) {
+          return true;
+        }
     }
     return false;
-  },
+  }
 };

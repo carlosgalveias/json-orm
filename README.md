@@ -63,6 +63,9 @@ var updateObj = [{
 
 instance.update(foundObjects[0], updateObj)  
 ```
+
+Objects can also be updated by simply changing properties of a object retrieved by 'getObject' as the object returned is a reference.
+
 #### Insert: 
 Inserts are like array operations, we are basically inserting a new element as a brother to our path , by default it inserts after our element, but we can specify
 if we want to insert before. 
@@ -79,7 +82,7 @@ instance.remove('path for element to delete')
 ```
 
 #### getObject:
-Gets the inner object from path
+Gets the inner object from path. Note that this object is a reference to a inner object from your json object.
 
 ```
 var element = instance.getObject('path');  
