@@ -1,3 +1,5 @@
+'use strict'
+
 var jsonorm = function (json) {
   var path = require('path');
   var common = require(path.join(__dirname, 'controllers/common.js'));

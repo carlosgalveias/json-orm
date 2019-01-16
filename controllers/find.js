@@ -1,5 +1,6 @@
-var path = require('path');
-var common = require(path.join(__dirname, 'common.js'));
+'use strict';
+
+const common = require('./common.js');
 /**
  * Recursive find method
  * @param  {Object} obj   Object to be searched
@@ -7,16 +8,16 @@ var common = require(path.join(__dirname, 'common.js'));
  * @param  {String} path  Search Path
  * @return {String[]}       Array of string with object paths to where matches occured
  */
-var find = function (obj, query, path) {
-  var findings = [];
-  if (path && common.match(obj, query)) {
-    findings.push(path);
-  }
-  for (var key in obj) {
-    if (typeof (obj[key]) === 'object') {
-      findings = findings.concat(find(obj[key], query, (path ? path + '.' + key : key)));
+const find = function(obj, query, path) {
+    var findings = [];
+    if (path && common.match(obj, query)) {
+        findings.push(path);
     }
-  }
-  return findings;
+    for (var key in obj) {
+        if (typeof(obj[key]) === 'object') {
+            findings = findings.concat(find(obj[key], query, (path ? path + '.' + key : key)));
+        }
+    }
+    return findings;
 };
 module.exports = find;
