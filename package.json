@@ -1,11 +1,11 @@
 {
   "name": "json-orm",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Manipulate json files using common orm language",
   "main": "index.js",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha test --recursive",
-    "coverage": "node node_modules/istanbul/lib/cli.js cover node_modules/mocha/bin/_mocha -- -R tap test/**/*.js > test.tap && node node_modules/istanbul/lib/cli.js report clover"
+    "coverage": "nyc --reporter=lcov npm run test"
   },
   "author": "Carlos Galveias",
   "repository": {
@@ -21,10 +21,17 @@
   "dependencies": {
     "lodash": "^4.17.2",
     "lodash.set": "^4.3.2",
+    "nyc": "^15.1.0",
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "istanbul": "^0.4.5",
-    "mocha": "^5.2.0"
+    "eslint": "^8.21.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "mocha": "^10.0.0"
   }
 }

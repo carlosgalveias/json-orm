@@ -1,12 +1,11 @@
-'use strict'
+'use strict';
 
-var jsonorm = function (json) {
-  var path = require('path');
-  var common = require(path.join(__dirname, 'controllers/common.js'));
-  var _find = require(path.join(__dirname, 'controllers/find.js'));
-  var _insert = require(path.join(__dirname, 'controllers/insert.js'));
-  var _remove = require(path.join(__dirname, 'controllers/remove.js'));
-  var _update = require(path.join(__dirname, 'controllers/update.js'));
+const jsonorm = function(json) {
+  const common = require('./controllers/common.js');
+  const _find = require('./controllers/find.js');
+  const _insert = require('./controllers/insert.js');
+  const _remove = require('./controllers/remove.js');
+  const _update = require('./controllers/update.js');
   try {
     this.data = json ? JSON.parse(json) : null;
   } catch (e) {
@@ -21,20 +20,20 @@ var jsonorm = function (json) {
    * @param  {Object} query The search query
    * @return {Array} Array of path references to the objects
    */
-  this.findSync = function (query) {
+  this.findSync = function(query) {
     if (!this.data) {
-      var stack = JSON.stringify(this);
+      const stack = JSON.stringify(this);
       throw (new Error('You need to load the json first\n' + stack));
     }
     if (query.and) {
       // TODO , find objects that match >1 query within
       let foundQueries = [];
-      var matchedObjects = [];
-      for (var n = 0; n < query.and.length; n++) {
-        foundQueries = foundQueries.concat(_find(this.data, query.and[n]));
+      const matchedObjects = [];
+      for (const index in query.and) {
+        foundQueries = foundQueries.concat(_find(this.data, query.and[index]));
       }
       foundQueries.forEach(f => {
-        var obj = common.getObjectFromPath(this.data, f);
+        const obj = common.getObjectFromPath(this.data, f);
         let match = true;
         query.and.forEach(q => {
           if (!common.match(obj, q)) {
@@ -49,12 +48,12 @@ var jsonorm = function (json) {
     } else if (query.or) {
       // TODO , find objects that match >1 query within
       let foundQueries = [];
-      let matchedObjects = [];
-      for (let n = 0; n < query.or.length; n++) {
-        foundQueries = foundQueries.concat(_find(this.data, query.or[n]));
+      const matchedObjects = [];
+      for (const index in query.or) {
+        foundQueries = foundQueries.concat(_find(this.data, query.or[index]));
       }
       foundQueries.forEach(f => {
-        var obj = common.getObjectFromPath(this.data, f);
+        const obj = common.getObjectFromPath(this.data, f);
         let match = false;
         query.or.forEach(q => {
           if (common.match(obj, q)) {
@@ -68,7 +67,7 @@ var jsonorm = function (json) {
       return matchedObjects;
     }
     if (query.length) {
-      for (let n in query) {
+      for (const n in query) {
         this.foundObjects = this.foundObjects.concat(_find(this.data, query[n]));
       }
     } else {
@@ -76,7 +75,7 @@ var jsonorm = function (json) {
     }
     return this.foundObjects;
   };
-  this.find = function (query) {
+  this.find = function(query) {
     return new Promise((resolve, reject) => {
       try {
         resolve(this.findSync(query));
@@ -91,19 +90,17 @@ var jsonorm = function (json) {
    * @param  {Object} newObj The new object/value
    * @return {Boolean}       Boolean return
    */
-  this.updateSync = function (path, newObj) {
-    return new Promise((resolve, reject) => {
-      if (!this.data) {
-        throw (new Error('You need to load the json first'));
-      }
-      if (typeof (path) === 'object' && path.length > 0) {
-        path.forEach(p => {
-          this.data = _update(this.data, p, newObj);
-        });
-      } else {
-        this.data = _update(this.data, path, newObj);
-      }
-    });
+  this.updateSync = function(path, newObj) {
+    if (!this.data) {
+      throw (new Error('You need to load the json first'));
+    }
+    if (typeof path === 'object' && path.length > 0) {
+      path.forEach(p => {
+        this.data = _update(this.data, p, newObj);
+      });
+    } else {
+      this.data = _update(this.data, path, newObj);
+    }
   };
   /**
    * Calls updateSync and returns as promise
@@ -111,7 +108,7 @@ var jsonorm = function (json) {
    * @param  {Object} newObj The new Object to insert
    * @return {Void}       resolves or rejects with error
    */
-  this.update = function (path, newObj) {
+  this.update = function(path, newObj) {
     return new Promise((resolve, reject) => {
       try {
         this.update(path, newObj);
@@ -128,11 +125,11 @@ var jsonorm = function (json) {
    * @param  {Boolean} before Before or After (default)
    * @return {Boolean} If insert is successfull
    */
-  this.insertSync = function (path, newObj, before) {
+  this.insertSync = function(path, newObj, before) {
     if (!this.data) {
       throw (new Error('You need to load the json first'));
     }
-    if (typeof (path) === 'object' && path.length > 0) {
+    if (typeof path === 'object' && path.length > 0) {
       path.forEach(p => {
         this.data = _insert(this.data, p, newObj, before);
       });
@@ -147,7 +144,7 @@ var jsonorm = function (json) {
    * @param  {Boolean} before Before or After (default)
    * @return {Void}       resolves or rejects with error
    */
-  this.insert = function (path, newObj, before) {
+  this.insert = function(path, newObj, before) {
     return new Promise((resolve, reject) => {
       try {
         this.insertSync(path, newObj, before);
@@ -162,11 +159,11 @@ var jsonorm = function (json) {
    * @param  {String} path   The path for our reference object
    * @return {Void}
    */
-  this.removeSync = function (path) {
+  this.removeSync = function(path) {
     if (!this.data) {
       throw (new Error('You need to load the json first'));
     }
-    if (typeof (path) === 'object' && path.length > 0) {
+    if (typeof path === 'object' && path.length > 0) {
       path.forEach(p => {
         _remove(this.data, p);
       });
@@ -178,7 +175,7 @@ var jsonorm = function (json) {
    * Calls RemoveSync and returns as promise
    * @param  {String} path   The path for our reference object
    */
-  this.remove = function (path) {
+  this.remove = function(path) {
     return new Promise((resolve, reject) => {
       try {
         this.removeSync(path);
@@ -193,7 +190,7 @@ var jsonorm = function (json) {
    * @param  {String} path Path for the object
    * @return {Object}      The object
    */
-  this.getObject = function (path) {
+  this.getObject = function(path) {
     if (!this.data) {
       throw (new Error('You need to load the json first'));
     }
@@ -204,7 +201,7 @@ var jsonorm = function (json) {
    * @param {[type]} path   [description]
    * @param {[type]} object [description]
    */
-  this.setObject = function (path, object) {
+  this.setObject = function(path, object) {
     if (!this.data) {
       throw (new Error('You need to load the json first'));
     }
@@ -214,8 +211,15 @@ var jsonorm = function (json) {
     this.data = common.setObjectFromPath(this.data, path, object);
     return this.data;
   };
-  this.getParent = function (path) {
+  this.getParent = function(path) {
     return common.getParent(path);
+  };
+  this.load = function(path) {
+    const data = common.load(path);
+    this.data = data;
+  };
+  this.save = function(path) {
+    common.save(this.data, path);
   };
   return this;
 };

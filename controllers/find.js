@@ -9,15 +9,15 @@ const common = require('./common.js');
  * @return {String[]}       Array of string with object paths to where matches occured
  */
 const find = function(obj, query, path) {
-    var findings = [];
-    if (path && common.match(obj, query)) {
-        findings.push(path);
+  let findings = [];
+  if (path && common.match(obj, query)) {
+    findings.push(path);
+  }
+  for (const key in obj) {
+    if (typeof obj[key] === 'object') {
+      findings = findings.concat(find(obj[key], query, (path ? path + '.' + key : key)));
     }
-    for (var key in obj) {
-        if (typeof(obj[key]) === 'object') {
-            findings = findings.concat(find(obj[key], query, (path ? path + '.' + key : key)));
-        }
-    }
-    return findings;
+  }
+  return findings;
 };
 module.exports = find;

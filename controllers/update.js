@@ -21,22 +21,21 @@ const common = require('./common.js');
  * @return {String[]}       Array of string with object paths to where matches occured
  */
 const update = function(obj, path, args) {
-    if (!args || typeof(args) !== 'object') {
-        throw (new Error('invalid arguments'));
-    }
-    // Args are in the update object format
-    for (var n = 0; n < args.length; n++) {
-        var updt = args[n];
-        if (updt.type === 'normal' && !updt.value.src) {
-            common.setObjectFromPath(obj, path + '.' + updt.keyName, updt.value);
-        } else if (updt.type === 'normal') {
-            for (var i = 0; i < updt.value.src.length; i++) {
-                if (common.getObjectFromPath(obj, path)[updt.keyName] === updt.value.src[i]) {
-                    common.setObjectFromPath(obj, path + '.' + updt.keyName, updt.value.dst[i]);
-                }
-            }
+  if (!args || typeof args !== 'object') {
+    throw (new Error('invalid arguments'));
+  }
+  // Args are in the update object format
+  for (const arg of args) {
+    if (arg.type === 'normal' && !arg.value.src) {
+      common.setObjectFromPath(obj, path + '.' + arg.keyName, arg.value);
+    } else if (arg.type === 'normal') {
+      for (var i = 0; i < arg.value.src.length; i++) {
+        if (common.getObjectFromPath(obj, path)[arg.keyName] === arg.value.src[i]) {
+          common.setObjectFromPath(obj, path + '.' + arg.keyName, arg.value.dst[i]);
         }
+      }
     }
-    return obj;
+  }
+  return obj;
 };
 module.exports = update;
