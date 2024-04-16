@@ -29,7 +29,7 @@ const update = function(obj, path, args) {
     if (arg.type === 'normal' && !arg.value.src) {
       common.setObjectFromPath(obj, path + '.' + arg.keyName, arg.value);
     } else if (arg.type === 'normal') {
-      for (var i = 0; i < arg.value.src.length; i++) {
+      for (let i = 0; i < arg.value.src.length; i++) {
         if (common.getObjectFromPath(obj, path)[arg.keyName] === arg.value.src[i]) {
           common.setObjectFromPath(obj, path + '.' + arg.keyName, arg.value.dst[i]);
         }

@@ -9,7 +9,7 @@ module.exports = {
    */
   load: function(path) {
     if (!path) {
-      throw new Error('you must provide a valid path')
+      throw new Error('you must provide a valid path');
     }
     let fs;
     try {
@@ -77,14 +77,17 @@ module.exports = {
     const testObj = tmpObj || obj[condition.keyName];
     switch (condition.type) {
       case 'eval':
+        // eslint-disable-next-line no-case-declarations
         let ret;
+        // eslint-disable-next-line no-eval
         eval('ret = testObj ' + condition.value);
         if (!ret) {
           return false;
         }
         break;
       case 'regexp':
-        let r = new RegExp(condition.value);
+        // eslint-disable-next-line no-case-declarations
+        const r = new RegExp(condition.value);
         if (!r.test(testObj)) {
           return false;
         }
