@@ -7,18 +7,30 @@ const JSONORM = require('../index');
 describe('Security Tests', function() {
   
   describe('Arbitrary Code Execution Prevention', function() {
-    it('should reject eval with raw code strings', function() {
-      const db = new JSONORM({ users: [{ name: 'John', age: 30 }] });
+    it('should accept old string format for backward compatibility', function() {
+      const db = new JSONORM({ users: [{ name: 'John', age: 30 }, { name: 'Jane', age: 25 }] });
       
-      // Old eval format with raw string should fail
-      const result = db.findSync({
+      // Old format should still work
+      const result1 = db.findSync({
         keyName: 'age',
         type: 'eval',
-        value: '> 18'  // String instead of structured object - should return no results
+        value: '> 25'
       });
+      assert.strictEqual(result1.length, 1);
       
-      // Should return empty array since the format is invalid
-      assert.strictEqual(result.length, 0);
+      const result2 = db.findSync({
+        keyName: 'age',
+        type: 'eval',
+        value: '<= 25'
+      });
+      assert.strictEqual(result2.length, 1);
+      
+      const result3 = db.findSync({
+        keyName: 'age',
+        type: 'eval',
+        value: '=== 30'
+      });
+      assert.strictEqual(result3.length, 1);
     });
     
     it('should only allow whitelisted operations in eval', function() {
@@ -43,17 +55,25 @@ describe('Security Tests', function() {
       }, /Invalid operation/);
     });
     
-    it('should reject eval attempts without structured operations', function() {
-      const db = new JSONORM({ data: { value: 10 } });
+    it('should reject dangerous eval expressions', function() {
+      const db = new JSONORM({ users: [{ name: 'John', age: 30 }] });
       
-      // String instead of object should return no results
-      const result = db.findSync({
-        keyName: 'value',
-        type: 'eval',
-        value: 'anything'
-      });
+      // Expressions with code execution attempts should fail
+      assert.throws(() => {
+        db.findSync({
+          keyName: 'age',
+          type: 'eval',
+          value: '> 18; require("child_process").exec("bad")'
+        });
+      }, /Invalid eval expression/);
       
-      assert.strictEqual(result.length, 0);
+      assert.throws(() => {
+        db.findSync({
+          keyName: 'age',
+          type: 'eval',
+          value: 'function() { return true; }'
+        });
+      }, /Invalid eval expression/);
     });
   });
   

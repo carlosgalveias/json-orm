@@ -225,6 +225,60 @@ module.exports = {
     }
   },
   /**
+   * Safely parses eval string expressions into structured operations
+   * Maintains backward compatibility while preventing code execution
+   * @param {string} expression - The comparison expression (e.g., '> 18', '<= 100', '=== "test"')
+   * @returns {object|null} - Structured operation object { op, operand } or null if not a string
+   */
+  parseEvalExpression: function(expression) {
+    if (typeof expression !== 'string') {
+      return null; // Not a string, will be handled as new format
+    }
+    
+    expression = expression.trim();
+    
+    // Define safe operator patterns (order matters - check longer operators first)
+    // Patterns only match safe values: numbers, quoted strings, or simple identifiers
+    const operators = [
+      { pattern: /^===\s*([0-9.]+|['"][^'"]*['"])$/, op: 'eq' },
+      { pattern: /^!==\s*([0-9.]+|['"][^'"]*['"])$/, op: 'neq' },
+      { pattern: /^>=\s*([0-9.]+)$/, op: 'gte' },
+      { pattern: /^<=\s*([0-9.]+)$/, op: 'lte' },
+      { pattern: /^>\s*([0-9.]+)$/, op: 'gt' },
+      { pattern: /^<\s*([0-9.]+)$/, op: 'lt' },
+      { pattern: /^==\s*([0-9.]+|['"][^'"]*['"])$/, op: 'eq' },
+      { pattern: /^!=\s*([0-9.]+|['"][^'"]*['"])$/, op: 'neq' },
+      { pattern: /^\.includes\(['"]([^'"]+)['"]\)$/, op: 'contains' },
+      { pattern: /^\.startsWith\(['"]([^'"]+)['"]\)$/, op: 'startsWith' },
+      { pattern: /^\.endsWith\(['"]([^'"]+)['"]\)$/, op: 'endsWith' }
+    ];
+    
+    // Try to match against each operator pattern
+    for (const { pattern, op } of operators) {
+      const match = expression.match(pattern);
+      if (match) {
+        let operand = match[1].trim();
+        
+        // Remove quotes from string values
+        if ((operand.startsWith('"') && operand.endsWith('"')) ||
+            (operand.startsWith("'") && operand.endsWith("'"))) {
+          operand = operand.slice(1, -1);
+        }
+        
+        // Try to parse as number if it looks numeric
+        const numValue = Number(operand);
+        if (!isNaN(numValue) && operand !== '') {
+          operand = numValue;
+        }
+        
+        return { op, operand };
+      }
+    }
+    
+    // If no pattern matched, throw error
+    throw new Error(`Invalid eval expression: "${expression}". Supported formats: >, <, >=, <=, ==, !=, ===, !==, .includes("x"), .startsWith("x"), .endsWith("x")`);
+  },
+  /**
    * Gets an object from a dot-notation path (wrapper for get helper).
    * @param {Object} obj - The object to query
    * @param {string} path - The path to the property
@@ -317,7 +371,26 @@ module.exports = {
     const testObj = tmpObj || obj[condition.keyName];
     switch (condition.type) {
       case 'eval':
-        // Define a whitelist of allowed operations
+        // Support both old string format (for backward compatibility) and new object format
+        let evalOp, evalOperand;
+        
+        if (typeof condition.value === 'string') {
+          // Old format: parse string expression safely
+          const parsed = module.exports.parseEvalExpression(condition.value);
+          if (!parsed) {
+            throw new Error('Invalid eval expression format');
+          }
+          evalOp = parsed.op;
+          evalOperand = parsed.operand;
+        } else if (typeof condition.value === 'object' && condition.value.op && condition.value.operand !== undefined) {
+          // New format: use structured operation directly
+          evalOp = condition.value.op;
+          evalOperand = condition.value.operand;
+        } else {
+          throw new Error('Invalid eval format. Use string expression (e.g., "> 18") or object format (e.g., { op: "gt", operand: 18 })');
+        }
+        
+        // Define allowed operations
         const allowedOps = {
           'gt': (a, b) => a > b,
           'lt': (a, b) => a < b,
@@ -330,17 +403,11 @@ module.exports = {
           'endsWith': (a, b) => String(a).endsWith(String(b))
         };
         
-        // Parse condition.value as structured operation
-        if (typeof condition.value !== 'object' || !condition.value.op || !condition.value.operand) {
-          return false;
+        if (!allowedOps[evalOp]) {
+          throw new Error(`Invalid operation: ${evalOp}. Allowed: ${Object.keys(allowedOps).join(', ')}`);
         }
         
-        const { op, operand } = condition.value;
-        if (!allowedOps[op]) {
-          throw new Error(`Invalid operation: ${op}`);
-        }
-        
-        return allowedOps[op](testObj, operand);
+        return allowedOps[evalOp](testObj, evalOperand);
       case 'regexp':
         // Validate regex pattern
         // eslint-disable-next-line no-case-declarations

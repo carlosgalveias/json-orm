@@ -25,18 +25,25 @@ We will respond to security reports within 48 hours and will work with you to un
 
 **Secure Usage:**
 ```javascript
-// ✅ Safe: Uses whitelisted operation
+// ✅ Safe: Old string format (safely parsed)
+db.findSync({
+  keyName: 'age',
+  type: 'eval',
+  value: '> 18'
+});
+
+// ✅ Safe: New object format
 db.findSync({
   keyName: 'age',
   type: 'eval',
   value: { op: 'gt', operand: 18 }
 });
 
-// ❌ Rejected: Raw code execution not allowed
+// ❌ Rejected: Invalid/dangerous expressions
 db.findSync({
   keyName: 'age',
   type: 'eval',
-  value: '> 18'  // Will throw error
+  value: '> 18; maliciousCode()'  // Will throw error
 });
 ```
 
@@ -192,26 +199,32 @@ class SecureDataAccess {
 }
 ```
 
-## Breaking Changes in Security Updates
+## Backward Compatibility
 
-### eval() Operation Format Change
+### eval() Operation Format
 
-The `eval` type now requires structured operations instead of raw code:
+The `eval` type supports **both** string and object formats for maximum compatibility:
 
-**Before (Vulnerable):**
+**String Format (Backward Compatible):**
 ```javascript
+// Safely parsed without code execution
 { keyName: 'age', type: 'eval', value: '> 18' }
+{ keyName: 'age', type: 'eval', value: '<= 100' }
+{ keyName: 'name', type: 'eval', value: '.startsWith("J")' }
 ```
 
-**After (Secure):**
+**Object Format (Recommended):**
 ```javascript
 { keyName: 'age', type: 'eval', value: { op: 'gt', operand: 18 } }
+{ keyName: 'age', type: 'eval', value: { op: 'lte', operand: 100 } }
+{ keyName: 'name', type: 'eval', value: { op: 'startsWith', operand: 'J' } }
 ```
 
-**Migration Guide:**
-- Replace raw comparison strings with structured operations
-- Use `gt`, `lt`, `gte`, `lte`, `eq`, `neq` for numeric comparisons
-- Use `contains`, `startsWith`, `endsWith` for string operations
+**Supported Operations:**
+- Numeric comparisons: `gt` (>), `lt` (<), `gte` (>=), `lte` (<=), `eq` (===), `neq` (!==)
+- String operations: `contains` (.includes), `startsWith` (.startsWith), `endsWith` (.endsWith)
+
+**Security Note:** Both formats are secure. String expressions are parsed using a whitelist of safe operators, preventing code injection.
 
 ## Security Audit History
 

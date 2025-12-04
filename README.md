@@ -3,7 +3,7 @@
 A lightweight, zero-dependency Node.js library for querying and manipulating JSON data structures using an ORM-like interface. Perfect for working with JSON files as simple data stores without the overhead of a full database.
 
 [![npm version](https://img.shields.io/npm/v/json-orm.svg)](https://www.npmjs.com/package/json-orm)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
 
@@ -712,21 +712,24 @@ json-orm implements multiple security controls to protect against common vulnera
 
 For detailed security information, see [SECURITY.md](SECURITY.md).
 
-### Breaking Changes
+### Backward Compatibility
 
-**eval operation format has changed for security:**
+The `eval` operation now accepts **both formats** for maximum compatibility:
 
 ```javascript
-// ❌ Old (removed for security)
+// ✅ Old format (still supported, parsed safely)
 db.findSync({ keyName: 'age', type: 'eval', value: '> 18' });
+db.findSync({ keyName: 'name', type: 'eval', value: '.startsWith("J")' });
 
-// ✅ New (secure)
+// ✅ New format (also supported)
 db.findSync({
   keyName: 'age',
   type: 'eval',
   value: { op: 'gt', operand: 18 }
 });
 ```
+
+**Both formats are secure** - string expressions are safely parsed without code execution.
 
 **Supported eval operations:** `gt`, `lt`, `gte`, `lte`, `eq`, `neq`, `contains`, `startsWith`, `endsWith`
 
@@ -748,7 +751,7 @@ Please ensure:
 
 ## License
 
-ISC License - see the [LICENSE](LICENSE) file for details.
+MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
