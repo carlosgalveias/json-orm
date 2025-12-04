@@ -1,15 +1,19 @@
 'use strict';
 
-const _ = require('lodash');
+const { get, set } = require('./common');
+
+/**
+ * Inserts a new object before or after a reference object in an array.
+ * @param {Object} obj - The root object containing the array
+ * @param {string} path - The dot-notation path to the reference object
+ * @param {*} newObj - The new object to insert
+ * @param {boolean} [before=false] - If true, insert before the reference; otherwise insert after
+ * @returns {Object} The modified root object
+ */
 const insert = function(obj, path, newObj, before) {
-  // to insert
-  // 1 Get keys on the parent object
-  // 2 Create a copy by inserting each key, insert our new object
-  //     before or after our reference object
-  // 3 replace parent object with new constructed object
   const parentPath = path.replace(/\.[a-zA-Z0-9]*$/, '');
-  const refObj = _.get(obj, path);
-  const oldParent = _.get(obj, parentPath);
+  const refObj = get(obj, path);
+  const oldParent = get(obj, parentPath);
   const newParent = [];
   for (const key in oldParent) {
     if (oldParent[key] === refObj && before) {
@@ -20,7 +24,7 @@ const insert = function(obj, path, newObj, before) {
       newParent.push(newObj);
     }
   }
-  obj = _.set(obj, parentPath, newParent);
+  obj = set(obj, parentPath, newParent);
   return obj;
 };
 module.exports = insert;

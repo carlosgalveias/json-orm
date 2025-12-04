@@ -1,12 +1,13 @@
 'use strict';
 
 const common = require('./common.js');
+
 /**
- * Recursive find method
- * @param  {Object} obj   Object to be searched
- * @param  {Object} query The query object
- * @param  {String} path  Search Path
- * @return {String[]}       Array of string with object paths to where matches occured
+ * Recursively searches an object for properties matching a query condition.
+ * @param {Object} obj - The object to search
+ * @param {Object} query - The query condition with keyName, type, and value properties
+ * @param {string} [path=''] - The current dot-notation path (used internally for recursion)
+ * @returns {string[]} Array of dot-notation paths where matches occurred
  */
 const find = function(obj, query, path) {
   let findings = [];

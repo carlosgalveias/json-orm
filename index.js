@@ -1,5 +1,11 @@
 'use strict';
 
+/**
+ * JSON ORM constructor - Creates a new instance for querying and manipulating JSON data.
+ * @param {string|Object} [json] - A JSON string or object to initialize with
+ * @throws {Error} If input is not a valid JSON object or string
+ * @returns {Object} A new jsonorm instance with methods for querying and manipulating JSON
+ */
 const jsonorm = function(json) {
   const common = require('./controllers/common.js');
   const _find = require('./controllers/find.js');
@@ -15,10 +21,17 @@ const jsonorm = function(json) {
     this.data = json;
   }
   this.foundObjects = [];
+  
   /**
-   * Finds the key path of the ojbect(s) being queried
-   * @param  {Object} query The search query
-   * @return {Array} Array of path references to the objects
+   * Synchronously finds object paths matching a query condition.
+   * @param {Object|Object[]} query - The search query or array of queries
+   * @param {string} query.keyName - The property name to match
+   * @param {string} [query.type='normal'] - The match type: 'normal', 'eval', or 'regexp'
+   * @param {*} query.value - The value to match against
+   * @param {Object} [query.and] - Array of conditions that must all match
+   * @param {Object} [query.or] - Array of conditions where at least one must match
+   * @returns {string[]} Array of dot-notation paths to matching objects
+   * @throws {Error} If data is not loaded
    */
   this.findSync = function(query) {
     if (!this.data) {
@@ -75,6 +88,12 @@ const jsonorm = function(json) {
     }
     return this.foundObjects;
   };
+  
+  /**
+   * Asynchronously finds object paths matching a query condition.
+   * @param {Object|Object[]} query - The search query (same format as findSync)
+   * @returns {Promise<string[]>} Promise resolving to array of paths to matching objects
+   */
   this.find = function(query) {
     return new Promise((resolve, reject) => {
       try {
@@ -84,11 +103,12 @@ const jsonorm = function(json) {
       }
     });
   };
+  
   /**
-   * Updates the object with the new object
-   * @param  {String} path   The object path to update
-   * @param  {Object} newObj The new object/value
-   * @return {Boolean}       Boolean return
+   * Synchronously updates objects at specified paths.
+   * @param {string|string[]} path - The dot-notation path or array of paths to update
+   * @param {Object[]} newObj - Array of update instructions with keyName, type, and value
+   * @throws {Error} If data is not loaded
    */
   this.updateSync = function(path, newObj) {
     if (!this.data) {
@@ -102,28 +122,30 @@ const jsonorm = function(json) {
       this.data = _update(this.data, path, newObj);
     }
   };
+  
   /**
-   * Calls updateSync and returns as promise
-   * @param  {String} path   The path for our reference object
-   * @param  {Object} newObj The new Object to insert
-   * @return {Void}       resolves or rejects with error
+   * Asynchronously updates objects at specified paths.
+   * @param {string|string[]} path - The dot-notation path or array of paths to update
+   * @param {Object[]} newObj - Array of update instructions
+   * @returns {Promise<void>} Promise that resolves when update is complete
    */
   this.update = function(path, newObj) {
     return new Promise((resolve, reject) => {
       try {
-        this.update(path, newObj);
+        this.updateSync(path, newObj);
         resolve();
       } catch (e) {
         reject(e);
       }
     });
   };
+  
   /**
-   * Inserts a new object before or after our path object
-   * @param  {String} path   The path for our reference object
-   * @param  {Object} newObj The new Object to insert
-   * @param  {Boolean} before Before or After (default)
-   * @return {Boolean} If insert is successfull
+   * Synchronously inserts a new object before or after a reference object in an array.
+   * @param {string|string[]} path - The dot-notation path or array of paths to the reference object(s)
+   * @param {*} newObj - The new object to insert
+   * @param {boolean} [before=false] - If true, insert before the reference; otherwise insert after
+   * @throws {Error} If data is not loaded
    */
   this.insertSync = function(path, newObj, before) {
     if (!this.data) {
@@ -137,12 +159,13 @@ const jsonorm = function(json) {
       this.data = _insert(this.data, path, newObj, before);
     }
   };
+  
   /**
-   * Calls insertSync and returns as promise
-   * @param  {String} path   The path for our reference object
-   * @param  {Object} newObj The new Object to insert
-   * @param  {Boolean} before Before or After (default)
-   * @return {Void}       resolves or rejects with error
+   * Asynchronously inserts a new object before or after a reference object.
+   * @param {string|string[]} path - The dot-notation path or array of paths to the reference object(s)
+   * @param {*} newObj - The new object to insert
+   * @param {boolean} [before=false] - If true, insert before the reference; otherwise insert after
+   * @returns {Promise<void>} Promise that resolves when insert is complete
    */
   this.insert = function(path, newObj, before) {
     return new Promise((resolve, reject) => {
@@ -154,10 +177,11 @@ const jsonorm = function(json) {
       }
     });
   };
+  
   /**
-   * Removes a object from path
-   * @param  {String} path   The path for our reference object
-   * @return {Void}
+   * Synchronously removes objects at specified paths.
+   * @param {string|string[]} path - The dot-notation path or array of paths to remove
+   * @throws {Error} If data is not loaded
    */
   this.removeSync = function(path) {
     if (!this.data) {
@@ -165,15 +189,17 @@ const jsonorm = function(json) {
     }
     if (typeof path === 'object' && path.length > 0) {
       path.forEach(p => {
-        _remove(this.data, p);
+        this.data = _remove(this.data, p);
       });
     } else {
-      _remove(this.data, path);
+      this.data = _remove(this.data, path);
     }
   };
+  
   /**
-   * Calls RemoveSync and returns as promise
-   * @param  {String} path   The path for our reference object
+   * Asynchronously removes objects at specified paths.
+   * @param {string|string[]} path - The dot-notation path or array of paths to remove
+   * @returns {Promise<void>} Promise that resolves when removal is complete
    */
   this.remove = function(path) {
     return new Promise((resolve, reject) => {
@@ -185,10 +211,12 @@ const jsonorm = function(json) {
       }
     });
   };
+  
   /**
-   * Gets the json object from a given path
-   * @param  {String} path Path for the object
-   * @return {Object}      The object
+   * Gets the object at the specified path.
+   * @param {string} path - The dot-notation path to the object
+   * @returns {*} The object at the specified path
+   * @throws {Error} If data is not loaded
    */
   this.getObject = function(path) {
     if (!this.data) {
@@ -196,10 +224,13 @@ const jsonorm = function(json) {
     }
     return common.getObjectFromPath(this.data, path);
   };
+  
   /**
-   * Sets a object from path
-   * @param {[type]} path   [description]
-   * @param {[type]} object [description]
+   * Sets an object at the specified path.
+   * @param {string} path - The dot-notation path where to set the object
+   * @param {*} object - The object to set
+   * @returns {Object} The modified data object
+   * @throws {Error} If data is not loaded or path is not provided
    */
   this.setObject = function(path, object) {
     if (!this.data) {
@@ -211,13 +242,31 @@ const jsonorm = function(json) {
     this.data = common.setObjectFromPath(this.data, path, object);
     return this.data;
   };
+  
+  /**
+   * Gets the parent path by removing the last property segment.
+   * @param {string} path - The dot-notation path
+   * @returns {string} The parent path
+   */
   this.getParent = function(path) {
     return common.getParent(path);
   };
+  
+  /**
+   * Loads JSON data from a file and sets it as the current data.
+   * @param {string} path - The file path to load from
+   * @throws {Error} If file doesn't exist or cannot be loaded
+   */
   this.load = function(path) {
     const data = common.load(path);
     this.data = data;
   };
+  
+  /**
+   * Saves the current data to a JSON file.
+   * @param {string} path - The file path to save to
+   * @throws {Error} If data cannot be saved
+   */
   this.save = function(path) {
     common.save(this.data, path);
   };

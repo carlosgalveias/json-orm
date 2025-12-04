@@ -1,24 +1,23 @@
 'use strict';
 
-/**
- * Update Language
- * [{
- *  keyname: 'name',
- *  type: 'normal' (default), 'eval'
- *  value: {src:['John','Jack'],dst:['Mary','Jason']}
- *  // dynamic replacement example, will change John to Mary and Jack to Json, will not change otherwize. Values can be object
- *   value: 'new Date()' // eval example, adding if needed
- *   value: 34 // just setting new value, adding if needed
- * }]
- *
- */
 const common = require('./common.js');
+
 /**
- * Recursive find method
- * @param  {Object} obj   Object to be searched
- * @param  {Object} query The query object
- * @param  {String} path  Search Path
- * @return {String[]}       Array of string with object paths to where matches occured
+ * Updates properties of an object at the specified path based on update arguments.
+ * @param {Object} obj - The root object to modify
+ * @param {string} path - The dot-notation path to the object to update
+ * @param {Object[]} args - Array of update instructions
+ * @param {string} args[].keyName - The property name to update
+ * @param {string} [args[].type='normal'] - The update type: 'normal' or 'eval'
+ * @param {*|Object} args[].value - The new value, or an object with src/dst arrays for dynamic replacement
+ * @returns {Object} The modified root object
+ * @throws {Error} If args is not a valid object
+ * @example
+ * // Simple value update
+ * update(obj, 'users.0', [{keyName: 'age', value: 30}])
+ *
+ * // Dynamic replacement
+ * update(obj, 'users.0', [{keyName: 'name', value: {src: ['John'], dst: ['Jane']}}])
  */
 const update = function(obj, path, args) {
   if (!args || typeof args !== 'object') {
