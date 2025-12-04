@@ -15,7 +15,11 @@
   "keywords": [
     "node",
     "json",
-    "orm"
+    "orm",
+    "database",
+    "nosql",
+    "security",
+    "secure"
   ],
   "license": "MIT",
   "dependencies": {},

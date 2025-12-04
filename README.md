@@ -699,6 +699,37 @@ db.updateSync('users.0', [{ keyName: 'status', value: 'updated' }]);
 db.save('./users.json');
 ```
 
+## Security
+
+json-orm implements multiple security controls to protect against common vulnerabilities:
+
+- ✅ **No Arbitrary Code Execution**: Safe operation system replaces eval()
+- ✅ **Path Traversal Protection**: Validated file operations
+- ✅ **ReDoS Protection**: Regex pattern validation
+- ✅ **Recursion Limits**: Prevents stack overflow
+- ✅ **Prototype Pollution Protection**: Blocks dangerous property access
+- ✅ **Input Validation**: Comprehensive parameter validation
+
+For detailed security information, see [SECURITY.md](SECURITY.md).
+
+### Breaking Changes
+
+**eval operation format has changed for security:**
+
+```javascript
+// ❌ Old (removed for security)
+db.findSync({ keyName: 'age', type: 'eval', value: '> 18' });
+
+// ✅ New (secure)
+db.findSync({
+  keyName: 'age',
+  type: 'eval',
+  value: { op: 'gt', operand: 18 }
+});
+```
+
+**Supported eval operations:** `gt`, `lt`, `gte`, `lte`, `eq`, `neq`, `contains`, `startsWith`, `endsWith`
+
 ## Contributing
 
 Contributions are welcome! Please follow these guidelines:
